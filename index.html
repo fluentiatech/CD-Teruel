@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#C8102E">
+  <title>CD Teruel — Web Oficial del Club Deportivo Teruel</title>
+  <meta name="description" content="Web oficial del Club Deportivo Teruel. Noticias, plantilla del primer equipo, partidos, entradas y todo el rojinegro desde el estadio Pinilla.">
+  <link rel="icon" href="assets/img/escudo-cdt.png" type="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CD Teruel — Web Oficial">
+  <meta property="og:description" content="Toda la actualidad del Club Deportivo Teruel.">
+  <meta property="og:image" content="https://picsum.photos/seed/cdteruel-og/1200/630">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/legal.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div data-partial="header" data-active="noticias"></div>
+
+  <main>
+    <!-- 1 · HERO de bienvenida -->
+    <section class="hero hero--welcome" aria-label="Bienvenida">
+      <img class="hero__img" src="assets/img/FotoInicial.jpg" alt="Estadio Pinilla, casa del CD Teruel">
+      <div class="hero__scrim"></div>
+      <div class="wrap hero__inner"><div class="hero__content">
+        <h1 data-i18n="hero.bienvenida">Bienvenidos a la web oficial del CD Teruel</h1>
+      </div></div>
+    </section>
+
+    <!-- ===== CONTENIDO OCULTO TEMPORALMENTE (todo lo que va debajo del cartel de bienvenida) =====
+    <!== 2 · BANNER promocional ==>
+    <a class="promo" href="https://cdteruel.compralaentrada.com/" target="_blank" rel="noopener" aria-label="Campaña de abonos">
+      <div class="wrap promo__inner">
+        <div class="promo__text">
+          <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
+          <div>
+            <strong>Campaña de abonos 2026/27 — «Rojinegros de Pinilla»</strong>
+            <span>Renueva o hazte socio y vive todos los partidos en Pinilla.</span>
+          </div>
+        </div>
+        <span class="btn btn--light">Quiero mi abono
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+      </div>
+    </a>
+
+    <!== 3 · WIDGET PARTIDOS con pestañas ==>
+    <section class="section matches">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <span class="eyebrow">Calendario</span>
+            <h2>Próximos partidos</h2>
+          </div>
+          <a class="link-todo" href="primer-equipo.html">Ver calendario completo
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+
+        <a class="plan-link" href="#">
+          <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+          Plan de trabajo semanal del Primer Equipo</a>
+
+        <div data-tabs>
+          <div class="tabs" role="tablist" aria-label="Equipo">
+            <button class="tab" role="tab" aria-selected="true" aria-controls="mp-primer" id="tab-primer">Primer Equipo</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="mp-fem" id="tab-fem">Femenino</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="mp-juv" id="tab-juv">Juvenil A</button>
+          </div>
+
+          <div class="match-panel" id="mp-primer" role="tabpanel" aria-labelledby="tab-primer">
+            <div class="match-scroller">
+              <!== Próximo (previa) ==>
+              <article class="match-card">
+                <div class="match-card__top"><span>1ª RFEF · Jornada 35</span><span>Casa</span></div>
+                <div class="match-card__teams">
+                  <div class="match-team"><span class="crest"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="8" fill="#101012"/><rect x="8" width="6" height="40" fill="#C8102E"/><rect x="18" width="6" height="40" fill="#C8102E"/><rect x="28" width="6" height="40" fill="#C8102E"/></svg></span><span>CD Teruel</span></div>
+                  <div class="match-vs"><div class="kickoff">18:00</div><div class="lbl">Dom 13 jul</div></div>
+                  <div class="match-team"><span class="crest"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#0b5cab"/><text x="20" y="26" text-anchor="middle" font-size="15" fill="#fff" font-family="Outfit,sans-serif" font-weight="800">BM</text></svg></span><span>SD Barbastro</span></div>
+                </div>
+                <div class="match-card__info">
+                  <div><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>Estadio Pinilla · Teruel</div>
+                  <div><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>Domingo 13 de julio, 18:00</div>
+                </div>
+                <a class="btn btn--primary btn--sm btn--block" href="partido.html">Previa y entradas</a>
+              </article>
+
+              <!== Jugado (crónica) ==>
+              <article class="match-card">
+                <div class="match-card__top"><span>1ª RFEF · Jornada 34</span><span style="color:#e8506a">Final</span></div>
+                <div class="match-card__teams">
+                  <div class="match-team"><span class="crest"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="8" fill="#101012"/><rect x="8" width="6" height="40" fill="#C8102E"/><rect x="18" width="6" height="40" fill="#C8102E"/><rect x="28" width="6" height="40" fill="#C8102E"/></svg></span><span>CD Teruel</span></div>
+                  <div class="match-vs"><div class="score">2–1</div><div class="lbl">Finalizado</div></div>
+                  <div class="match-team"><span class="crest"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#c99700"/><text x="20" y="26" text-anchor="middle" font-size="15" fill="#101012" font-family="Outfit,sans-serif" font-weight="800">EJ</text></svg></span><span>CD Ebro</span></div>
+                </div>
+                <div class="match-card__info">
+                  <div><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>Estadio Pinilla · Teruel</div>
+                  <div><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>Domingo 6 de julio</div>
+                </div>
+                <a class="btn btn--ghost btn--sm btn--block" href="partido.html" style="border-color:var(--tinta-600);color:#fff">Ver crónica</a>
+              </article>
+
+              <!== Por definir ==>
+              <article class="match-card">
+                <div class="match-card__top"><span>1ª RFEF · Jornada 36</span><span>Fuera</span></div>
+                <div class="match-card__teams">
+                  <div class="match-team"><span class="crest"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#1a7a3c"/><text x="20" y="26" text-anchor="middle" font-size="14" fill="#fff" font-family="Outfit,sans-serif" font-weight="800">TE</text></svg></span><span>At. Teruel B</span></div>
+                  <div class="match-vs"><div class="kickoff" style="font-size:1rem;opacity:.6">Por definir</div><div class="lbl">Jor. 36</div></div>
+                  <div class="match-team"><span class="crest"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="8" fill="#101012"/><rect x="8" width="6" height="40" fill="#C8102E"/><rect x="18" width="6" height="40" fill="#C8102E"/><rect x="28" width="6" height="40" fill="#C8102E"/></svg></span><span>CD Teruel</span></div>
+                </div>
+                <div class="match-card__info">
+                  <div><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>Campo de Utrillas</div>
+                  <div><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>Horario por confirmar</div>
+                </div>
+                <a class="btn btn--ghost btn--sm btn--block" href="partido.html" style="border-color:var(--tinta-600);color:#fff">Info del partido</a>
+              </article>
+            </div>
+          </div>
+
+          <div class="match-panel" id="mp-fem" role="tabpanel" aria-labelledby="tab-fem" hidden>
+            <div class="match-scroller">
+              <article class="match-card">
+                <div class="match-card__top"><span>2ª Fed. Fem. · J-22</span><span>Casa</span></div>
+                <div class="match-card__teams">
+                  <div class="match-team"><span class="crest"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="8" fill="#101012"/><rect x="8" width="6" height="40" fill="#C8102E"/><rect x="18" width="6" height="40" fill="#C8102E"/><rect x="28" width="6" height="40" fill="#C8102E"/></svg></span><span>CD Teruel Fem.</span></div>
+                  <div class="match-vs"><div class="kickoff">12:00</div><div class="lbl">Sáb 12 jul</div></div>
+                  <div class="match-team"><span class="crest"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#6a1b9a"/><text x="20" y="26" text-anchor="middle" font-size="15" fill="#fff" font-family="Outfit,sans-serif" font-weight="800">ZA</text></svg></span><span>Oliver ZGZ</span></div>
+                </div>
+                <div class="match-card__info">
+                  <div><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>C.D. Pinilla · Campo 2</div>
+                </div>
+                <a class="btn btn--primary btn--sm btn--block" href="partido.html">Previa</a>
+              </article>
+            </div>
+          </div>
+
+          <div class="match-panel" id="mp-juv" role="tabpanel" aria-labelledby="tab-juv" hidden>
+            <div class="match-scroller">
+              <article class="match-card">
+                <div class="match-card__top"><span>Liga Nac. Juvenil · J-30</span><span>Fuera</span></div>
+                <div class="match-card__teams">
+                  <div class="match-team"><span class="crest"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#b71c1c"/><text x="20" y="26" text-anchor="middle" font-size="15" fill="#fff" font-family="Outfit,sans-serif" font-weight="800">MO</text></svg></span><span>Montecarlo</span></div>
+                  <div class="match-vs"><div class="kickoff">11:30</div><div class="lbl">Dom 13 jul</div></div>
+                  <div class="match-team"><span class="crest"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="8" fill="#101012"/><rect x="8" width="6" height="40" fill="#C8102E"/><rect x="18" width="6" height="40" fill="#C8102E"/><rect x="28" width="6" height="40" fill="#C8102E"/></svg></span><span>Juvenil A</span></div>
+                </div>
+                <div class="match-card__info">
+                  <div><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>Ciudad Deportiva Montecarlo</div>
+                </div>
+                <a class="btn btn--ghost btn--sm btn--block" href="partido.html" style="border-color:var(--tinta-600);color:#fff">Info del partido</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!== 4 · ACTUALIDAD ==>
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><span class="eyebrow">Al día</span><h2>Actualidad rojinegra</h2></div>
+          <a class="link-todo" href="noticias.html">Ver todas
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+
+        <div class="news-grid">
+          <a class="news-card news-card--feat" href="noticia.html" data-reveal>
+            <div class="news-card__media">
+              <img src="https://picsum.photos/seed/cdt-n0/900/700" alt="Entrenamiento del CD Teruel">
+              <div class="media-badges"><span class="media-badge"><svg class="icon" aria-hidden="true"><use href="#i-gallery"></use></svg></span></div>
+            </div>
+            <div class="news-card__body">
+              <div class="news-card__meta"><span class="cat">Primer Equipo</span><span>6 jul 2026</span></div>
+              <h3>El vestuario carga las pilas para el asalto al play-off con la mirada en Pinilla</h3>
+              <p>El técnico rojinegro recupera a tres piezas clave de cara al tramo decisivo de la temporada y avisa: «La grada será nuestro duodécimo jugador».</p>
+            </div>
+          </a>
+
+          <a class="news-card news-card--span4" href="noticia.html" data-reveal data-delay="1">
+            <div class="news-card__media"><img src="https://picsum.photos/seed/cdt-n1/600/400" alt="Cantera"></div>
+            <div class="news-card__body">
+              <div class="news-card__meta"><span class="cat">Cantera Pinilla</span><span>5 jul 2026</span></div>
+              <h3>El Juvenil A sella la permanencia con dos jornadas de margen</h3>
+            </div>
+          </a>
+          <a class="news-card news-card--span4" href="noticia.html" data-reveal data-delay="2">
+            <div class="news-card__media">
+              <img src="https://picsum.photos/seed/cdt-n2/600/400" alt="Femenino">
+              <div class="media-badges"><span class="media-badge"><svg class="icon" aria-hidden="true"><use href="#i-video"></use></svg></span></div>
+            </div>
+            <div class="news-card__body">
+              <div class="news-card__meta"><span class="cat">Femenino</span><span>4 jul 2026</span></div>
+              <h3>Nerea Gascón, la turolense que dirige el once desde el centro del campo</h3>
+            </div>
+          </a>
+          <a class="news-card news-card--span4" href="noticia.html" data-reveal data-delay="3">
+            <div class="news-card__media"><img src="https://picsum.photos/seed/cdt-n3/600/400" alt="Estadio Pinilla"></div>
+            <div class="news-card__body">
+              <div class="news-card__meta"><span class="cat">Club</span><span>2 jul 2026</span></div>
+              <h3>Pinilla estrena nueva iluminación LED de cara a los partidos nocturnos</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!== 5 · VÍDEOS ==>
+    <section class="section" style="background:var(--papel-2)">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><span class="eyebrow">CD Teruel TV</span><h2>Lo último en vídeo</h2></div>
+          <a class="link-todo" href="#">Ir al canal
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+        <div class="video-scroller">
+          <button class="video-card" data-video="dQw4w9WgXcQ" aria-label="Reproducir vídeo: resumen del derbi">
+            <img src="https://picsum.photos/seed/cdt-v1/800/450" alt="">
+            <span class="video-card__play"><span><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span></span>
+            <span class="video-card__cap"><span class="dur">3:42</span><h4>Resumen · CD Teruel 2–1 CD Ebro</h4></span>
+          </button>
+          <button class="video-card" data-video="dQw4w9WgXcQ" aria-label="Reproducir vídeo: rueda de prensa">
+            <img src="https://picsum.photos/seed/cdt-v2/800/450" alt="">
+            <span class="video-card__play"><span><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span></span>
+            <span class="video-card__cap"><span class="dur">8:15</span><h4>Rueda de prensa previa a la jornada 35</h4></span>
+          </button>
+          <button class="video-card" data-video="dQw4w9WgXcQ" aria-label="Reproducir vídeo: gol de la jornada">
+            <img src="https://picsum.photos/seed/cdt-v3/800/450" alt="">
+            <span class="video-card__play"><span><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span></span>
+            <span class="video-card__cap"><span class="dur">1:08</span><h4>El golazo de falta que abrió Pinilla</h4></span>
+          </button>
+          <button class="video-card" data-video="dQw4w9WgXcQ" aria-label="Reproducir vídeo: cantera">
+            <img src="https://picsum.photos/seed/cdt-v4/800/450" alt="">
+            <span class="video-card__play"><span><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg></span></span>
+            <span class="video-card__cap"><span class="dur">5:30</span><h4>Un día en la Ciudad Deportiva Pinilla</h4></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!== 6 · ACCESOS destacados (bento) ==>
+    <section class="section">
+      <div class="wrap">
+        <div class="sec-head"><div><span class="eyebrow">Accesos</span><h2>Directo a lo que buscas</h2></div></div>
+        <div class="bento">
+          <a class="access access--tall access--wide" href="#" data-reveal>
+            <img src="https://picsum.photos/seed/cdt-a1/900/700" alt="">
+            <span class="access__go"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+            <div><span class="k">Tienda oficial</span><h3>Equípate rojinegro 25/26</h3></div>
+          </a>
+          <a class="access" href="entradas.html" data-reveal data-delay="1">
+            <img src="https://picsum.photos/seed/cdt-a2/500/400" alt="">
+            <span class="access__go"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+            <div><span class="k">Entradas</span><h3>Compra tu entrada</h3></div>
+          </a>
+          <a class="access" href="club.html" data-reveal data-delay="2">
+            <img src="https://picsum.photos/seed/cdt-a3/500/400" alt="">
+            <span class="access__go"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+            <div><span class="k">Experiencias</span><h3>Tour de Pinilla</h3></div>
+          </a>
+          <a class="access access--wide" href="primer-equipo.html" data-reveal data-delay="3">
+            <img src="https://picsum.photos/seed/cdt-a4/800/400" alt="">
+            <span class="access__go"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+            <div><span class="k">Primer Equipo</span><h3>Plantilla 2025/26</h3></div>
+          </a>
+          <a class="access" href="primer-equipo.html" data-reveal data-delay="4">
+            <img src="https://picsum.photos/seed/cdt-a5/500/400" alt="">
+            <span class="access__go"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
+            <div><span class="k">Femenino</span><h3>Sección femenina</h3></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!== 7 · FEED SOCIAL ==>
+    <section class="section" style="background:var(--papel-2)">
+      <div class="wrap">
+        <div class="sec-head">
+          <div><span class="eyebrow">Comunidad</span><h2>El CD Teruel en redes</h2></div>
+          <a class="link-todo" href="#">@cdteruel
+            <svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+        </div>
+        <div class="social-grid">
+          <a class="social-post" href="#"><img src="https://picsum.photos/seed/cdt-s1/400/400" alt="Publicación de Instagram del CD Teruel"><span class="social-post__ov"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg><p>¡Tres puntos que saben a gloria en Pinilla!</p></span></a>
+          <a class="social-post" href="#"><img src="https://picsum.photos/seed/cdt-s2/400/400" alt="Publicación de Instagram del CD Teruel"><span class="social-post__ov"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg><p>Entrenamiento a puertas abiertas este jueves</p></span></a>
+          <a class="social-post" href="#"><img src="https://picsum.photos/seed/cdt-s3/400/400" alt="Publicación de Instagram del CD Teruel"><span class="social-post__ov"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg><p>Bienvenido al club, Iker</p></span></a>
+          <a class="social-post" href="#"><img src="https://picsum.photos/seed/cdt-s4/400/400" alt="Publicación de Instagram del CD Teruel"><span class="social-post__ov"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg><p>La cantera de Pinilla, en imágenes</p></span></a>
+          <a class="social-post" href="#"><img src="https://picsum.photos/seed/cdt-s5/400/400" alt="Publicación de Instagram del CD Teruel"><span class="social-post__ov"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg><p>Camino del play-off</p></span></a>
+        </div>
+      </div>
+    </section>
+
+    ===== FIN CONTENIDO OCULTO ===== -->
+    <!-- 8 · Patrocinadores (oculto temporalmente)
+    <div data-partial="sponsors"></div>
+    -->
+  </main>
+
+  <div data-partial="footer"></div>
+
+  <script src="js/partials.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cookies.js"></script>
+</body>
+</html>

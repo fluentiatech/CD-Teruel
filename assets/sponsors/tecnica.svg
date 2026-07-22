@@ -1,0 +1,7 @@
+<svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mudéjar Sport">
+  <g fill="currentColor">
+    <path d="M20 8 4 30l16 22 16-22z m0 12 8 10-8 12-8-12z"/>
+    <text x="44" y="28" font-family="'Arial Black', Arial, sans-serif" font-weight="800" font-size="19" letter-spacing="-.5">MUDÉJAR</text>
+    <text x="44" y="46" font-family="Arial, sans-serif" font-weight="700" font-size="13" letter-spacing="7">SPORT</text>
+  </g>
+</svg>

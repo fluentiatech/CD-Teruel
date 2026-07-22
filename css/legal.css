@@ -1,0 +1,103 @@
+/* =========================================================================
+   CD TERUEL — Páginas legales + panel de cookies
+   ========================================================================= */
+
+/* ---- Layout documento legal ---- */
+.legal-layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+@media (max-width: 860px) { .legal-layout { grid-template-columns: 1fr; } }
+
+.legal-nav__card { background: #fff; border: 1px solid var(--linea); border-radius: var(--radio-lg); padding: 1.3rem; position: sticky; top: calc(var(--header-h) + 1rem); }
+@media (max-width: 860px) { .legal-nav__card { position: static; } }
+.legal-nav__card h3 { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--texto-sec); margin-bottom: 1rem; }
+.legal-nav__card nav { display: grid; gap: .15rem; }
+.legal-nav__card nav a { padding: .5rem .6rem; border-radius: 8px; font-weight: 600; font-size: .9rem; color: var(--gris-700); border-left: 2px solid transparent; transition: color var(--dur) var(--ease), background var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.legal-nav__card nav a:hover { color: var(--rojo); background: var(--papel-2); border-color: var(--rojo); }
+
+.legal-doc { max-width: 74ch; }
+.legal-block { scroll-margin-top: calc(var(--header-h) + 1.5rem); }
+.legal-block + .legal-block { margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--linea); }
+.legal-doc h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); text-transform: uppercase; letter-spacing: .01em; }
+.legal-doc h3 { font-size: 1.15rem; margin-top: 1.8rem; margin-bottom: .3rem; color: var(--gris-900); }
+.legal-doc p { color: var(--gris-700); line-height: 1.7; margin-top: .8rem; }
+.legal-doc a:not(.btn) { color: var(--rojo); font-weight: 600; }
+.legal-doc a:not(.btn):hover { text-decoration: underline; }
+/* Los botones dentro del documento conservan su color propio */
+.legal-doc a.btn--primary { color: #fff; }
+.legal-doc a.btn--ghost { color: var(--gris-900); }
+.legal-doc ul.bullets { margin-top: .8rem; padding-left: 1.2rem; list-style: disc; color: var(--gris-700); display: grid; gap: .5rem; line-height: 1.6; }
+.legal-updated { font-size: .8rem; color: var(--texto-sec); text-transform: uppercase; letter-spacing: .08em; font-weight: 600; margin-bottom: .5rem; }
+.legal-note { font-size: .88rem; color: var(--texto-sec); background: var(--papel-2); border-left: 3px solid var(--linea-fuerte); padding: .8rem 1rem; border-radius: 0 8px 8px 0; }
+.legal-disclaimer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px dashed var(--linea-fuerte); font-size: .82rem; color: var(--texto-sec); font-style: italic; }
+
+/* Bloque de datos identificativos */
+.legal-data { background: #fff; border: 1px solid var(--linea); border-radius: var(--radio-lg); padding: .4rem 1.2rem; margin-top: 1rem; }
+.legal-data dl { margin: 0; }
+.legal-data dl > div { display: grid; grid-template-columns: 240px 1fr; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid var(--linea); }
+.legal-data dl > div:last-child { border-bottom: 0; }
+@media (max-width: 560px) { .legal-data dl > div { grid-template-columns: 1fr; gap: .2rem; } }
+.legal-data dt { font-weight: 700; color: var(--gris-900); font-family: "Barlow", sans-serif; font-size: .82rem; letter-spacing: .04em; text-transform: uppercase; }
+.legal-data dd { margin: 0; color: var(--gris-700); }
+
+/* Tablas legales */
+.legal-table-wrap { overflow-x: auto; margin-top: 1rem; border: 1px solid var(--linea); border-radius: var(--radio); }
+.legal-table { width: 100%; border-collapse: collapse; font-size: .86rem; min-width: 560px; }
+.legal-table th { text-align: left; background: var(--papel-2); padding: .7rem .9rem; font-family: "Barlow", sans-serif; font-weight: 700; font-size: .74rem; letter-spacing: .04em; text-transform: uppercase; color: var(--gris-700); border-bottom: 1px solid var(--linea); }
+.legal-table td { padding: .7rem .9rem; border-bottom: 1px solid var(--linea); color: var(--gris-700); vertical-align: top; line-height: 1.4; }
+.legal-table tr:last-child td { border-bottom: 0; }
+
+/* =========================================================================
+   BANNER + PANEL DE COOKIES
+   ========================================================================= */
+.cookie-banner {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 250;
+  background: var(--marino); color: rgba(255,255,255,.9);
+  box-shadow: 0 -10px 40px -20px rgba(0,0,0,.6);
+  transform: translateY(110%); transition: transform var(--dur) var(--ease);
+  border-top: 3px solid var(--rojo);
+}
+.cookie-banner.is-visible { transform: translateY(0); }
+.cookie-banner__inner { display: flex; align-items: center; gap: 1.5rem; padding-block: 1.2rem; flex-wrap: wrap; }
+.cookie-banner__text { flex: 1 1 340px; }
+.cookie-banner__text h3 { color: #fff; font-size: 1.05rem; text-transform: uppercase; letter-spacing: .02em; }
+.cookie-banner__text p { font-size: .88rem; color: rgba(255,255,255,.72); margin-top: .3rem; line-height: 1.5; }
+.cookie-banner__text a { color: var(--rojo-300); font-weight: 600; }
+.cookie-banner__actions { display: flex; gap: .6rem; flex-wrap: wrap; }
+@media (max-width: 560px) { .cookie-banner__actions { width: 100%; } .cookie-banner__actions .btn { flex: 1; } }
+
+/* Modal de configuración */
+.cookie-modal { position: fixed; inset: 0; z-index: 260; display: grid; place-items: center; padding: var(--gutter); background: rgba(16,16,18,.6); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: opacity var(--dur) var(--ease), visibility var(--dur); }
+.cookie-modal.is-open { opacity: 1; visibility: visible; }
+.cookie-modal__box { width: min(560px, 100%); max-height: 88vh; overflow-y: auto; background: var(--papel); border-radius: var(--radio-lg); box-shadow: var(--sombra-lg); transform: translateY(14px) scale(.98); transition: transform var(--dur) var(--ease); }
+.cookie-modal.is-open .cookie-modal__box { transform: none; }
+.cookie-modal__head { display: flex; align-items: center; justify-content: space-between; padding: 1.3rem 1.5rem; border-bottom: 1px solid var(--linea); position: sticky; top: 0; background: var(--papel); }
+.cookie-modal__head h3 { text-transform: uppercase; font-size: 1.15rem; }
+.cookie-modal__body { padding: 1.2rem 1.5rem; }
+.cookie-modal__body > p { color: var(--gris-700); font-size: .92rem; line-height: 1.6; }
+.cookie-opt { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--linea); }
+.cookie-opt:last-child { border-bottom: 0; }
+.cookie-opt__txt h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: .01em; }
+.cookie-opt__txt p { font-size: .85rem; color: var(--texto-sec); margin-top: .25rem; line-height: 1.5; }
+.cookie-opt__fixed { font-size: .78rem; font-weight: 700; color: var(--gris-400); text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; padding-top: .3rem; }
+
+/* Switch */
+.switch { position: relative; width: 46px; height: 26px; flex: none; margin-top: .2rem; }
+.switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.switch__track { position: absolute; inset: 0; background: var(--linea-fuerte); border-radius: 999px; transition: background var(--dur) var(--ease); }
+.switch__track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; background: #fff; border-radius: 50%; box-shadow: 0 1px 3px rgba(0,0,0,.3); transition: transform var(--dur) var(--ease); }
+.switch input:checked + .switch__track { background: var(--rojo); }
+.switch input:checked + .switch__track::after { transform: translateX(20px); }
+.switch input:focus-visible + .switch__track { outline: 2.5px solid var(--rojo); outline-offset: 2px; }
+.cookie-modal__foot { display: flex; gap: .6rem; padding: 1.2rem 1.5rem; border-top: 1px solid var(--linea); flex-wrap: wrap; position: sticky; bottom: 0; background: var(--papel); }
+.cookie-modal__foot .btn { flex: 1; }
+
+/* =========================================================================
+   CONSENTIMIENTO RGPD EN FORMULARIOS
+   ========================================================================= */
+.consent { display: flex; align-items: flex-start; gap: .7rem; margin-top: 1rem; }
+.consent input[type="checkbox"] { flex: none; width: 20px; height: 20px; margin-top: 2px; accent-color: var(--rojo); cursor: pointer; }
+.consent label { font-size: .86rem; color: var(--gris-700); line-height: 1.5; }
+.consent label a { color: var(--rojo); font-weight: 600; }
+.consent.has-error label { color: var(--rojo); }
+.consent.has-error input[type="checkbox"] { outline: 2px solid var(--rojo); outline-offset: 2px; }
+.consent__error { display: none; color: var(--rojo); font-size: .82rem; font-weight: 600; margin-top: .3rem; }
+.consent.has-error .consent__error { display: block; }

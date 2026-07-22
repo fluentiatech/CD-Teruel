@@ -1,0 +1,15 @@
+<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CD Teruel">
+  <path d="M20 14 H180 V128 C180 186 143 216 100 232 C57 216 20 186 20 128 Z"
+        fill="none" stroke="currentColor" stroke-width="7"/>
+  <text x="100" y="60" text-anchor="middle" font-family="Georgia, serif"
+        font-weight="700" font-size="30" letter-spacing="7" fill="currentColor">CDT</text>
+  <g fill="currentColor">
+    <path d="M100 92 c-13 0 -24 6 -30 15 c-4 -6 -11 -9 -18 -8 c6 4 8 10 8 16
+             c0 12 9 22 22 26 l-4 12 h44 l-4 -12 c13 -4 22 -14 22 -26
+             c0 -6 2 -12 8 -16 c-7 -1 -14 2 -18 8 c-6 -9 -17 -15 -30 -15 Z"/>
+    <path d="M78 100 c-6 -6 -14 -8 -22 -6 c7 1 12 5 16 11 Z"/>
+    <path d="M122 100 c6 -6 14 -8 22 -6 c-7 1 -12 5 -16 11 Z"/>
+  </g>
+  <text x="100" y="204" text-anchor="middle" font-family="Georgia, serif"
+        font-weight="700" font-size="14" letter-spacing="3" fill="currentColor">1954</text>
+</svg>

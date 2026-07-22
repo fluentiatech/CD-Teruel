@@ -1,0 +1,67 @@
+{
+  "club": {
+    "nombre": "Club Deportivo Teruel",
+    "nombre_corto": "CD Teruel",
+    "gentilicio": "turolense",
+    "ciudad": "Teruel",
+    "fundacion": 1954,
+    "color_primario": "#C8102E",
+    "color_secundario": "#1a2a52",
+    "escudo": "assets/img/escudo-cdt.png"
+  },
+  "datos_fiscales": {
+    "denominacion": "Club Deportivo Teruel",
+    "cif": "G-44004372",
+    "domicilio": "C/ Juez Villanueva, nº 1, 44001 Teruel",
+    "email": "prensacdteruel@gmail.com",
+    "email_rgpd": "prensacdteruel@gmail.com",
+    "telefono": "978 622 074",
+    "dpo": null,
+    "registro_entidades_deportivas_aragon": "003849/1",
+    "naturaleza": "Entidad deportiva sin ánimo de lucro"
+  },
+  "instalaciones": {
+    "estadio_nombre": "Pinilla",
+    "estadio_capacidad": 3500,
+    "ciudad_deportiva_nombre": "Ciudad Deportiva Pinilla"
+  },
+  "idiomas": [
+    { "codigo": "es", "por_defecto": true, "etiqueta": "ES" },
+    { "codigo": "en", "por_defecto": false, "etiqueta": "EN" }
+  ],
+  "equipos": [
+    { "nombre": "Primer Equipo", "slug": "primer-equipo", "tipo": "primer_equipo", "competicion": "Primera Federación · Grupo I" },
+    { "nombre": "Femenino", "slug": "femenino", "tipo": "femenino", "competicion": "Segunda Federación Femenina" },
+    { "nombre": "Juvenil A", "slug": "juvenil-a", "tipo": "cantera", "competicion": "Liga Nacional Juvenil" },
+    { "nombre": "Cadete A", "slug": "cadete-a", "tipo": "cantera", "competicion": "Cadete Preferente" }
+  ],
+  "subdominios": {
+    "tienda": "https://tienda.cdteruel.es",
+    "entradas": "https://entradas.cdteruel.es",
+    "abonados": "https://abonados.cdteruel.es",
+    "login": null,
+    "experiencias": null
+  },
+  "redes_sociales": {
+    "instagram": "https://www.instagram.com/cdteruel",
+    "x": "https://x.com/CDTeruel",
+    "youtube": "https://www.youtube.com/@cdteruel",
+    "tiktok": "https://www.tiktok.com/@cdteruel",
+    "facebook": "https://www.facebook.com/cdteruel"
+  },
+  "apps": {
+    "url_ios": "#",
+    "url_android": "#"
+  },
+  "patrocinadores": [
+    { "nombre": "Caja Rural de Teruel", "nivel": "principal", "url": "#", "logo": "assets/sponsors/principal.svg" },
+    { "nombre": "Mudéjar Sport", "nivel": "tecnico", "url": "#", "logo": "assets/sponsors/tecnica.svg" },
+    { "nombre": "Jamón de Teruel D.O.", "nivel": "oficial", "url": "#" },
+    { "nombre": "Termas Pallarés", "nivel": "oficial", "url": "#" },
+    { "nombre": "Cerámica Turolense", "nivel": "oficial", "url": "#" },
+    { "nombre": "Aguas de Pinilla", "nivel": "colaborador", "url": "#" },
+    { "nombre": "Autobuses Samar", "nivel": "colaborador", "url": "#" },
+    { "nombre": "Hotel Reina Cristina", "nivel": "colaborador", "url": "#" }
+  ],
+  "analitica": { "gtm_container": "GTM-XXXXXXX" }
+}

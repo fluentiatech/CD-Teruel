@@ -1,0 +1,65 @@
+<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Escudo del Club Deportivo Teruel">
+  <defs>
+    <linearGradient id="esc-shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".18"/>
+      <stop offset=".5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="esc-shape">
+      <path d="M20 14 H180 V128 C180 186 143 216 100 232 C57 216 20 186 20 128 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- contorno -->
+  <path d="M20 14 H180 V128 C180 186 143 216 100 232 C57 216 20 186 20 128 Z"
+        fill="#101012" stroke="#C8102E" stroke-width="6"/>
+
+  <g clip-path="url(#esc-shape)">
+    <!-- bandas rojinegras verticales -->
+    <rect x="20"  y="14" width="26.6" height="220" fill="#C8102E"/>
+    <rect x="46.6" y="14" width="26.6" height="220" fill="#101012"/>
+    <rect x="73.3" y="14" width="26.6" height="220" fill="#C8102E"/>
+    <rect x="100"  y="14" width="26.6" height="220" fill="#101012"/>
+    <rect x="126.6" y="14" width="26.6" height="220" fill="#C8102E"/>
+    <rect x="153.3" y="14" width="26.7" height="220" fill="#101012"/>
+
+    <!-- jefe (banda superior) con nombre corto -->
+    <rect x="20" y="14" width="160" height="42" fill="#101012"/>
+    <text x="100" y="43" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+          font-weight="700" font-size="26" letter-spacing="6" fill="#ffffff">CDT</text>
+
+    <!-- disco central -->
+    <circle cx="100" cy="128" r="52" fill="#101012"/>
+    <circle cx="100" cy="128" r="52" fill="none" stroke="#C8102E" stroke-width="4"/>
+
+    <!-- El Torico: silueta de toro estilizada -->
+    <g fill="#ffffff">
+      <path d="M100 96
+               c-13 0 -24 6 -30 15
+               c-4 -6 -11 -9 -18 -8
+               c6 4 8 10 8 16
+               c0 12 9 22 22 26
+               l-4 12 h44 l-4 -12
+               c13 -4 22 -14 22 -26
+               c0 -6 2 -12 8 -16
+               c-7 -1 -14 2 -18 8
+               c-6 -9 -17 -15 -30 -15 Z"/>
+      <!-- cuernos -->
+      <path d="M78 104 c-6 -6 -14 -8 -22 -6 c7 1 12 5 16 11 Z"/>
+      <path d="M122 104 c6 -6 14 -8 22 -6 c-7 1 -12 5 -16 11 Z"/>
+    </g>
+    <!-- ojos -->
+    <circle cx="90" cy="120" r="2.4" fill="#C8102E"/>
+    <circle cx="110" cy="120" r="2.4" fill="#C8102E"/>
+
+    <!-- estrella mudéjar de 8 puntas bajo el toro -->
+    <g transform="translate(100 168)" fill="#C8102E">
+      <path d="M0 -11 L3 -3 L11 -3 L4.5 2 L7 10 L0 5 L-7 10 L-4.5 2 L-11 -3 L-3 -3 Z"/>
+    </g>
+
+    <rect x="20" y="14" width="160" height="120" fill="url(#esc-shine)"/>
+  </g>
+
+  <!-- año de fundación -->
+  <text x="100" y="224" text-anchor="middle" font-family="Georgia, serif"
+        font-weight="700" font-size="13" letter-spacing="2" fill="#ffffff" opacity=".9">1954</text>
+</svg>

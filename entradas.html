@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#C8102E">
+  <title>Entradas - CD Teruel</title>
+  <meta name="description" content="Compra tus entradas para los partidos del CD Teruel en el estadio Pinilla.">
+  <link rel="icon" href="assets/img/escudo-cdt.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/legal.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div data-partial="header" data-active="partidos"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap page-hero__inner">
+        <nav class="breadcrumb" aria-label="Migas">
+          <a href="index.html">Inicio</a>
+          <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
+          <span>Entradas</span>
+        </nav>
+        <h1>Entradas</h1>
+        <p>Vive el rojinegro en directo. Compra tu entrada para los próximos partidos en Pinilla.</p>
+      </div>
+    </section>
+
+    <section class="section"><div class="wrap">
+      <div class="article" style="grid-template-columns:1.5fr 1fr;align-items:start">
+        <div>
+          <div class="sec-head"><div><span class="eyebrow">En casa</span><h2>Próximos partidos en Pinilla</h2></div></div>
+
+          <div style="display:grid;gap:1rem">
+            <div class="aside-card" style="display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;justify-content:space-between">
+              <div style="display:flex;align-items:center;gap:1rem">
+                <span class="match-team" style="flex-direction:row;gap:.6rem"><span class="crest" style="width:44px;height:44px;background:var(--tinta);border-radius:12px;display:grid;place-items:center;padding:5px"><svg viewBox="0 0 40 40"><rect x="8" width="6" height="40" fill="#C8102E"/><rect x="18" width="6" height="40" fill="#C8102E"/><rect x="28" width="6" height="40" fill="#C8102E"/></svg></span></span>
+                <div>
+                  <strong style="display:block">CD Teruel · SD Barbastro</strong>
+                  <span style="font-size:.86rem;color:var(--texto-sec)">1ª RFEF · J-35 · Dom 13 jul, 18:00</span>
+                </div>
+              </div>
+              <a class="btn btn--primary btn--sm" href="#comprar">Comprar</a>
+            </div>
+
+            <div class="aside-card" style="display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;justify-content:space-between">
+              <div style="display:flex;align-items:center;gap:1rem">
+                <span class="crest" style="width:44px;height:44px;background:var(--tinta);border-radius:12px;display:grid;place-items:center;padding:5px"><svg viewBox="0 0 40 40"><rect x="8" width="6" height="40" fill="#C8102E"/><rect x="18" width="6" height="40" fill="#C8102E"/><rect x="28" width="6" height="40" fill="#C8102E"/></svg></span>
+                <div>
+                  <strong style="display:block">CD Teruel · Deportivo Aragón</strong>
+                  <span style="font-size:.86rem;color:var(--texto-sec)">1ª RFEF · J-37 · Fecha por confirmar</span>
+                </div>
+              </div>
+              <button class="btn btn--ghost btn--sm" disabled style="opacity:.5;cursor:not-allowed">Próximamente</button>
+            </div>
+          </div>
+        </div>
+
+        <aside id="comprar">
+          <div class="aside-card">
+            <h3>Tipo de entrada</h3>
+            <div style="display:grid;gap:1px;background:var(--linea);border:1px solid var(--linea);border-radius:var(--radio);overflow:hidden;margin-bottom:1.2rem">
+              <label style="display:flex;justify-content:space-between;align-items:center;background:#fff;padding:1rem"><span><strong>Tribuna cubierta</strong><br><small style="color:var(--texto-sec)">Numerada</small></span><strong style="color:var(--rojo)">18 €</strong></label>
+              <label style="display:flex;justify-content:space-between;align-items:center;background:#fff;padding:1rem"><span><strong>General</strong><br><small style="color:var(--texto-sec)">Fondo y laterales</small></span><strong style="color:var(--rojo)">12 €</strong></label>
+              <label style="display:flex;justify-content:space-between;align-items:center;background:#fff;padding:1rem"><span><strong>Reducida</strong><br><small style="color:var(--texto-sec)">Menores y jubilados</small></span><strong style="color:var(--rojo)">7 €</strong></label>
+            </div>
+            <a class="btn btn--primary btn--block" href="#">
+              <svg class="icon" aria-hidden="true"><use href="#i-ticket"></use></svg>Continuar la compra</a>
+            <p style="font-size:.78rem;color:var(--texto-sec);margin-top:.8rem">Los socios acceden gratis con su abono. La compra se completa en la plataforma de ticketing del club.</p>
+          </div>
+        </aside>
+      </div>
+    </div></section>
+
+    <div data-partial="sponsors"></div>
+  </main>
+
+  <div data-partial="footer"></div>
+  <script src="js/partials.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cookies.js"></script>
+</body>
+</html>

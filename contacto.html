@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#C8102E">
+  <title>Contacto - CD Teruel</title>
+  <meta name="description" content="Contacta con el Club Deportivo Teruel: formulario de contacto y suscripción al boletín.">
+  <link rel="icon" href="assets/img/escudo-cdt.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/legal.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div data-partial="header" data-active=""></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap page-hero__inner">
+        <nav class="breadcrumb" aria-label="Migas">
+          <a href="index.html">Inicio</a>
+          <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
+          <span>Contacto</span>
+        </nav>
+        <h1>Contacto</h1>
+        <p>¿Tienes una consulta para el club? Escríbenos o suscríbete al boletín rojinegro.</p>
+      </div>
+    </section>
+
+    <section class="section"><div class="wrap">
+      <div class="form-layout">
+
+        <!-- Datos de contacto del club -->
+        <aside class="contact-info">
+          <h2>Club Deportivo Teruel</h2>
+          <ul>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg><span>C/ Juez Villanueva, nº 1<br>44001 Teruel</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg><span>978 622 074</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-share"></use></svg><a href="mailto:prensacdteruel@gmail.com">prensacdteruel@gmail.com</a></li>
+          </ul>
+        </aside>
+
+        <!-- Formulario de contacto -->
+        <form class="form-card" data-consent-form novalidate>
+          <h2>Escríbenos</h2>
+          <div class="field-grid">
+            <div class="field">
+              <label for="c-nombre">Nombre y apellidos</label>
+              <input type="text" id="c-nombre" name="nombre" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="c-email">Correo electrónico</label>
+              <input type="email" id="c-email" name="email" required autocomplete="email">
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-asunto">Asunto</label>
+            <input type="text" id="c-asunto" name="asunto" required>
+          </div>
+          <div class="field">
+            <label for="c-mensaje">Mensaje</label>
+            <textarea id="c-mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+
+          <!-- Consentimiento RGPD (checkbox NO premarcado) -->
+          <div class="consent">
+            <input type="checkbox" id="c-consent" name="consent" required>
+            <div>
+              <label for="c-consent">He leído y acepto la <a href="legal.html#privacidad">política de privacidad</a>. Consiento el tratamiento de mis datos por el Club Deportivo Teruel para atender esta consulta.</label>
+              <p class="consent__error">Debes aceptar la política de privacidad para enviar el formulario.</p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="margin-top:1.4rem">Enviar mensaje
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></button>
+          <p class="form-ok" hidden>Gracias. Hemos recibido tu mensaje (demostración: el prototipo no envía datos).</p>
+        </form>
+      </div>
+    </div></section>
+  </main>
+
+  <div data-partial="footer"></div>
+  <script src="js/partials.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/cookies.js"></script>
+</body>
+</html>

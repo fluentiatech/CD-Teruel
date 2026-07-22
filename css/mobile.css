@@ -1,0 +1,114 @@
+/* =========================================================================
+   CD TERUEL — Optimización móvil (carga la última)
+   Objetivo: 0 scroll horizontal + tamaños ajustados en pantallas pequeñas.
+   ========================================================================= */
+
+/* ---- Blindaje anti-desbordamiento horizontal (global) ---- */
+img, svg, video, table, iframe { max-width: 100%; }
+/* Cortar sangrado lateral SOLO en el contenido, nunca en el header
+   (el header aloja el mega-menú full-width, que no debe recortarse). */
+main .wrap { overflow-x: clip; }
+/* Los carruseles internos SÍ deben poder scrollear en horizontal */
+.match-scroller, .video-scroller, .legal-table-wrap, .table-wrap,
+.subnav__inner { overflow-x: auto; }
+
+/* =========================================================================
+   TABLET (<= 900px)
+   ========================================================================= */
+@media (max-width: 900px) {
+  :root { --gutter: clamp(1rem, 5vw, 1.6rem); }
+}
+
+/* =========================================================================
+   MÓVIL (<= 768px)
+   ========================================================================= */
+@media (max-width: 768px) {
+  :root { --header-h: 68px; }
+
+  /* Header: escudo más contenido para no comerse el ancho */
+  .brand__escudo { height: 78px; top: 4px; }
+  .header__inner { gap: .5rem; }
+  .header__actions { gap: .3rem; }
+  .header__ctas .btn { font-size: .74rem; padding: .5rem .7rem; }
+  .header__ctas .btn .icon { width: 15px; height: 15px; }
+
+  /* Hero de bienvenida */
+  .hero { min-height: clamp(460px, 74vh, 620px); }
+  .hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.8rem); }
+  .hero__inner { padding-top: 5rem; padding-bottom: 2.5rem; }
+  .hero--welcome h1 { max-width: 14ch; }
+
+  /* Títulos de sección */
+  .sec-head { gap: 1rem; margin-bottom: 1.5rem; }
+  .sec-head h2 { font-size: clamp(1.5rem, 6.5vw, 2rem); }
+  .section { padding-block: clamp(2.5rem, 9vw, 3.5rem); }
+
+  /* Cabeceras de página / equipo */
+  .page-hero h1 { font-size: clamp(1.7rem, 8vw, 2.4rem); }
+  .team-hero { min-height: clamp(240px, 56vw, 360px); }
+  .team-hero h1 { font-size: clamp(1.8rem, 9vw, 2.8rem); }
+
+  /* Subnav de equipo: scroll horizontal limpio con degradado de aviso */
+  .subnav__inner { -webkit-overflow-scrolling: touch; }
+  .subnav a { padding: .85rem .7rem; font-size: .84rem; }
+
+  /* Tarjetas de partido: 1 por fila, a ancho completo */
+  .fixture-row { grid-template-columns: 1fr; overflow: visible; }
+  .team-grid { gap: 1.5rem; }
+  .fixture__teams { font-size: 1.05rem; }
+  .fixture__when { font-size: 1rem; }
+  .fixture--result .fixture__when { font-size: 1.6rem; }
+
+  /* Plantilla: 2 columnas de jugadores en móvil */
+  .squad-grid { grid-template-columns: repeat(2, 1fr); gap: .7rem; }
+  .player-card__num { font-size: 2.4rem; }
+  .player-card__body h3 { font-size: 1rem; }
+
+  /* Ficha de jugador */
+  .player-hero__bignum { font-size: clamp(4rem, 22vw, 7rem); }
+  .stat-row { grid-template-columns: repeat(2, 1fr); }
+
+  /* Ficha de partido */
+  .match-hero__teams { gap: .6rem; }
+  .match-hero__team h2 { font-size: clamp(.9rem, 4.5vw, 1.3rem); }
+  .match-hero__center .sc { font-size: clamp(2.2rem, 13vw, 4rem); }
+
+  /* Botones a ancho cómodo (sin forzar bloque salvo los que ya lo son) */
+  .btn { padding: .78rem 1.2rem; }
+
+  /* Legal / transparencia: una columna, nav arriba */
+  .legal-layout { gap: 1.4rem; }
+  .legal-nav__card { position: static; }
+  .legal-doc h2 { font-size: clamp(1.4rem, 6.5vw, 1.8rem); }
+  .legal-data dl > div { grid-template-columns: 1fr; gap: .15rem; }
+
+  /* Formularios */
+  .field-grid { grid-template-columns: 1fr; gap: 0; }
+  .form-card { padding: 1.3rem; }
+
+  /* Banner de cookies: apilar en vertical, botones a ancho completo */
+  .cookie-banner__inner { flex-direction: column; align-items: stretch; gap: 1rem; }
+  .cookie-banner__actions { width: 100%; }
+  .cookie-banner__actions .btn { flex: 1; }
+  .cookie-modal__box { max-height: 90vh; }
+
+  /* Footer */
+  .footer__legal { gap: .4rem 1rem; font-size: .78rem; }
+  .footer__copy { flex-direction: column; gap: .4rem; }
+
+  /* Patrocinadores */
+  .sponsors__row { gap: 1.4rem 2rem; }
+
+  /* Grid de accesos (bento) ya cae a 1 col; noticias a 1 col ya definido */
+}
+
+/* =========================================================================
+   MÓVIL PEQUEÑO (<= 400px)
+   ========================================================================= */
+@media (max-width: 400px) {
+  .brand__escudo { height: 66px; }
+  .header__ctas .btn span { display: none; }     /* solo icono si no cabe */
+  .header__ctas .btn { padding: .55rem; width: 40px; height: 40px; }
+  .squad-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: clamp(1.7rem, 9vw, 2.3rem); }
+}

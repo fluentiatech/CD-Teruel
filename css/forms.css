@@ -1,0 +1,38 @@
+/* =========================================================================
+   CD TERUEL — Formularios (contacto, newsletter) con consentimiento RGPD
+   ========================================================================= */
+.form-layout { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+@media (max-width: 820px) { .form-layout { grid-template-columns: 1fr; } }
+
+.contact-info { background: var(--marino); color: rgba(255,255,255,.85); border-radius: var(--radio-lg); padding: 1.8rem; }
+.contact-info h2 { color: #fff; font-size: 1.3rem; text-transform: uppercase; margin-bottom: 1.2rem; }
+.contact-info ul { display: grid; gap: 1.1rem; }
+.contact-info li { display: flex; align-items: flex-start; gap: .8rem; font-size: .92rem; line-height: 1.4; }
+.contact-info li .icon { width: 20px; height: 20px; color: var(--rojo-300); flex: none; margin-top: 2px; }
+.contact-info a { color: #fff; }
+.contact-info a:hover { color: var(--rojo-300); }
+
+.form-card { background: #fff; border: 1px solid var(--linea); border-radius: var(--radio-lg); padding: clamp(1.5rem, 3vw, 2.2rem); }
+.form-card h2 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); text-transform: uppercase; margin-bottom: 1.4rem; }
+
+.field { display: grid; gap: .4rem; margin-bottom: 1.1rem; }
+.field label { font-family: "Barlow", sans-serif; font-weight: 700; font-size: .82rem; letter-spacing: .03em; text-transform: uppercase; color: var(--gris-700); }
+.field input, .field textarea {
+  width: 100%; padding: .8rem 1rem; border: 1.5px solid var(--linea-fuerte); border-radius: 10px;
+  background: var(--papel); color: var(--gris-900); font-size: .95rem;
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--rojo); box-shadow: 0 0 0 3px rgba(200,16,46,.12); }
+.field textarea { resize: vertical; min-height: 120px; }
+.field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+@media (max-width: 560px) { .field-grid { grid-template-columns: 1fr; gap: 0; } }
+.field.has-error input, .field.has-error textarea { border-color: var(--rojo); }
+
+.form-ok { margin-top: 1rem; padding: .8rem 1rem; background: rgba(47,158,68,.1); border: 1px solid rgba(47,158,68,.4); color: #1e7a34; border-radius: 10px; font-size: .9rem; font-weight: 600; }
+
+/* Newsletter */
+.newsletter { margin-top: clamp(1.5rem, 3vw, 2.5rem); display: grid; gap: 1.2rem; }
+.newsletter p { color: var(--texto-sec); margin-top: .3rem; }
+.newsletter__row { display: flex; gap: .8rem; align-items: flex-start; }
+.newsletter__row .field { flex: 1; margin: 0; }
+@media (max-width: 560px) { .newsletter__row { flex-direction: column; } .newsletter__row .btn { width: 100%; } }
