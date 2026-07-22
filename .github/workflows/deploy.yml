@@ -1,8 +1,8 @@
-name: Deploy a GitHub Pages (páginas activas)
+name: Deploy a GitHub Pages
 
-# Publica únicamente las páginas HTML accesibles desde la home:
+# El repositorio contiene solo las páginas activas del sitio:
 #   index.html · transparencia.html · contacto.html · legal.html
-# junto con los recursos que necesitan (css, js, assets, data).
+# Este workflow las publica junto con sus recursos (css, js, assets, data).
 
 on:
   push:
@@ -25,23 +25,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Construir el sitio (solo páginas activas)
-        run: |
-          mkdir -p _site
-          # Páginas HTML activas
-          cp index.html transparencia.html contacto.html legal.html _site/
-          # Recursos que usan esas páginas
-          cp -r css js assets data _site/
-          echo "Contenido publicado:"
-          ls -R _site | head -60
-
       - name: Configurar Pages
         uses: actions/configure-pages@v5
 
-      - name: Subir artefacto
+      - name: Subir artefacto (raíz del repo)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: .
 
   deploy:
     needs: build

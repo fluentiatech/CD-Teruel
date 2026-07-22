@@ -14,3 +14,25 @@ desktop.ini
 *.log
 scratchpad/
 CD_Teruel.png
+
+# Páginas NO publicadas (existen en local pero no en el repo/deploy)
+club.html
+entradas.html
+femenino.html
+femenino-clasificacion.html
+femenino-noticias.html
+femenino-plantilla.html
+juvenil.html
+juvenil-clasificacion.html
+juvenil-noticias.html
+juvenil-plantilla.html
+primer-equipo.html
+primer-equipo-clasificacion.html
+primer-equipo-noticias.html
+primer-equipo-plantilla.html
+jugador.html
+noticia.html
+noticias.html
+partido.html
+plantilla.html
+css/team.css
