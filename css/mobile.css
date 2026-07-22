@@ -23,14 +23,17 @@ main .wrap { overflow-x: clip; }
    MÓVIL (<= 768px)
    ========================================================================= */
 @media (max-width: 768px) {
-  :root { --header-h: 68px; }
+  :root { --header-h: 64px; }
 
-  /* Header: escudo más contenido para no comerse el ancho */
-  .brand__escudo { height: 78px; top: 4px; }
+  /* Header: escudo grande que SÍ sobresale por debajo (como en escritorio) */
   .header__inner { gap: .5rem; }
+  .brand { align-self: stretch; }
+  .brand__escudo { height: 92px; top: 4px; }   /* 92 sobre header 64 => ~30px sobresale */
   .header__actions { gap: .3rem; }
-  .header__ctas .btn { font-size: .74rem; padding: .5rem .7rem; }
+  /* CTA "Hazte abonado" compacto pero visible */
+  .header__ctas .btn { font-size: .72rem; padding: .5rem .75rem; letter-spacing: 0; }
   .header__ctas .btn .icon { width: 15px; height: 15px; }
+  .burger { width: 40px; height: 40px; }
 
   /* Hero de bienvenida */
   .hero { min-height: clamp(460px, 74vh, 620px); }
@@ -106,9 +109,10 @@ main .wrap { overflow-x: clip; }
    MÓVIL PEQUEÑO (<= 400px)
    ========================================================================= */
 @media (max-width: 400px) {
-  .brand__escudo { height: 66px; }
-  .header__ctas .btn span { display: none; }     /* solo icono si no cabe */
-  .header__ctas .btn { padding: .55rem; width: 40px; height: 40px; }
+  .brand__escudo { height: 82px; }
+  /* Mantener "Hazte abonado" visible, solo más compacto */
+  .header__ctas .btn { font-size: .66rem; padding: .45rem .6rem; }
+  .header__ctas .btn .icon { display: none; }    /* quita el icono, deja el texto */
   .squad-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(1.7rem, 9vw, 2.3rem); }
 }

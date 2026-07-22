@@ -171,9 +171,15 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
-  document.addEventListener("partials:ready", init);
-  // fallback si no hay partials en la página
-  if (document.readyState !== "loading") setTimeout(function () {
-    if (!window.__cdtInit) { window.__cdtInit = 1; }
-  }, 0);
+  var started = false;
+  function boot() { if (started) return; started = true; init(); }
+
+  // partials.js se carga ANTES que main.js y dispara "partials:ready" de inmediato,
+  // así que ese evento puede haber ocurrido ya. Escuchamos Y arrancamos directamente.
+  document.addEventListener("partials:ready", boot);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();
