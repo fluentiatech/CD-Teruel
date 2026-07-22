@@ -314,7 +314,6 @@ h1, h2, h3, h4 {
 }
 .header__ctas .btn:hover { background: #fff; color: var(--rojo); border-color: #fff; transform: translateY(-1px); box-shadow: none; }
 .header__ctas .btn .icon { width: 17px; height: 17px; }
-@media (max-width: 900px) { .header__ctas .btn span { display: none; } .header__ctas .btn { padding: .6rem; width: 42px; height: 42px; } }
 
 /* Área de socio: sobre la franja azul marino */
 .socio-btn {
