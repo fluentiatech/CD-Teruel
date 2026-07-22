@@ -30,10 +30,12 @@ main .wrap { overflow-x: clip; }
   .brand { align-self: stretch; }
   .brand__escudo { height: 92px; top: 4px; }   /* 92 sobre header 64 => ~30px sobresale */
   .header__actions { gap: .3rem; }
-  /* CTA "Hazte abonado" compacto pero visible */
-  .header__ctas .btn { font-size: .72rem; padding: .5rem .75rem; letter-spacing: 0; }
-  .header__ctas .btn .icon { width: 15px; height: 15px; }
-  .burger { width: 40px; height: 40px; }
+  .header__spacer { flex: 1 1 0; min-width: 0; }
+  /* CTA "Hazte abonado": compacto y SIEMPRE visible */
+  .header__ctas { flex: none; }
+  .header__ctas .btn { font-size: .72rem; padding: .5rem .7rem; letter-spacing: 0; white-space: nowrap; }
+  .header__ctas .btn .icon { display: none; }   /* solo texto para que quepa */
+  .burger { width: 40px; height: 40px; flex: none; }
 
   /* Hero de bienvenida */
   .hero { min-height: clamp(460px, 74vh, 620px); }
@@ -79,11 +81,18 @@ main .wrap { overflow-x: clip; }
   /* Botones a ancho cómodo (sin forzar bloque salvo los que ya lo son) */
   .btn { padding: .78rem 1.2rem; }
 
-  /* Legal / transparencia: una columna, nav arriba */
-  .legal-layout { gap: 1.4rem; }
+  /* Legal / transparencia: una columna, nav arriba, sin desbordes */
+  .legal-layout { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; }
   .legal-nav__card { position: static; }
+  .legal-doc { max-width: 100%; min-width: 0; }
   .legal-doc h2 { font-size: clamp(1.4rem, 6.5vw, 1.8rem); }
+  /* romper palabras/URLs largas para que no empujen el ancho */
+  .legal-doc, .legal-doc p, .legal-doc li, .legal-doc a,
+  .legal-data dd, .legal-data dt { overflow-wrap: anywhere; word-break: break-word; }
   .legal-data dl > div { grid-template-columns: 1fr; gap: .15rem; }
+  /* Tablas: caja que scrollea internamente, nunca empuja la página */
+  .legal-table-wrap { max-width: 100%; }
+  .legal-table { min-width: 480px; font-size: .8rem; }
 
   /* Formularios */
   .field-grid { grid-template-columns: 1fr; gap: 0; }

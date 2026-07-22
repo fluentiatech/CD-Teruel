@@ -188,7 +188,7 @@
       var bk = b.key ? ' data-i18n="' + b.key + '"' : "";
       return '' +
         '<div class="acc">' +
-          '<button class="acc__trigger" aria-expanded="' + (i === 0 ? "true" : "false") + '">' +
+          '<button class="acc__trigger" aria-expanded="false">' +
             '<span' + bk + ">" + b.t + "</span>" + icon("i-chevron-down") +
           "</button>" +
           '<div class="acc__panel"><div>' + links + "</div></div>" +
@@ -229,12 +229,11 @@
       "</div>" +
     "</div></div></header>" +
 
-    // Drawer
+    // Drawer (menú a pantalla completa)
     '<div class="drawer" id="drawer">' +
-      '<div class="drawer__scrim" data-close="drawer"></div>' +
       '<div class="drawer__panel" role="dialog" aria-label="Menú" aria-modal="true">' +
         '<div class="drawer__head">' +
-          '<span class="brand__name" style="display:block">CD Teruel<small>DESDE 1954</small></span>' +
+          '<img class="drawer__escudo" src="assets/img/escudo-cdt.png" alt="CD Teruel">' +
           '<button class="icon-btn" data-close="drawer" aria-label="Cerrar">' + icon("i-close") + "</button>" +
         "</div>" +
         '<div class="drawer__body">' + acc +
