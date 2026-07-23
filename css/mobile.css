@@ -37,8 +37,13 @@ main .wrap { overflow-x: clip; }
   .header__ctas .btn .icon { display: none; }   /* solo texto para que quepa */
   .burger { width: 40px; height: 40px; flex: none; }
 
-  /* Hero de bienvenida: pantalla completa (sin que asome el footer) */
-  .hero { min-height: 100vh; min-height: 100dvh; }
+  /* Hero de bienvenida: llena EXACTAMENTE la pantalla descontando
+     la topbar (34px) y el header (64px) que quedan encima */
+  .hero {
+    min-height: calc(100vh - 34px - var(--header-h));
+    min-height: calc(100dvh - 34px - var(--header-h));
+    max-height: calc(100dvh - 34px - var(--header-h));
+  }
   .hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.8rem); }
   .hero__inner { padding-top: 5rem; padding-bottom: 2.5rem; }
   .hero--welcome h1 { max-width: 14ch; }
