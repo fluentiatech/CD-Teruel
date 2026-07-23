@@ -1,12 +1,23 @@
 /* =========================================================================
    CD TERUEL — Validación de formularios con consentimiento RGPD
    Exige checkbox de consentimiento (no premarcado) antes de enviar.
-   Prototipo: no envía datos a ningún servidor, solo valida y confirma.
+   Si el formulario tiene action (FormSubmit), se envía de verdad;
+   al volver con ?enviado=1 se muestra la confirmación.
    ========================================================================= */
 (function () {
   "use strict";
 
   function init() {
+    // Mensaje de éxito al volver del envío real
+    if (window.location.search.indexOf("enviado=1") !== -1) {
+      var ok = document.querySelector("[data-consent-form] .form-ok");
+      if (ok) {
+        ok.textContent = "Gracias. Hemos recibido tu mensaje y te responderemos lo antes posible.";
+        ok.hidden = false;
+        ok.scrollIntoView({ block: "center" });
+      }
+    }
+
     document.querySelectorAll("[data-consent-form]").forEach(function (form) {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -36,12 +47,13 @@
           return;
         }
 
-        // Éxito (demostración)
-        var okMsg = form.querySelector(".form-ok");
-        if (okMsg) okMsg.hidden = false;
-        form.querySelectorAll("input, textarea, button").forEach(function (el) {
-          if (el.type !== "submit") el.value = el.type === "checkbox" ? (el.checked = false) : "";
-        });
+        // Validación superada
+        if (form.getAttribute("action")) {
+          form.submit(); // envío real (FormSubmit → correo del club)
+        } else {
+          var okMsg = form.querySelector(".form-ok");
+          if (okMsg) okMsg.hidden = false;
+        }
       });
 
       // Limpiar error al corregir

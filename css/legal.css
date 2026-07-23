@@ -44,6 +44,8 @@
 .legal-table th { text-align: left; background: var(--papel-2); padding: .7rem .9rem; font-family: "Barlow", sans-serif; font-weight: 700; font-size: .74rem; letter-spacing: .04em; text-transform: uppercase; color: var(--gris-700); border-bottom: 1px solid var(--linea); }
 .legal-table td { padding: .7rem .9rem; border-bottom: 1px solid var(--linea); color: var(--gris-700); vertical-align: top; line-height: 1.4; }
 .legal-table tr:last-child td { border-bottom: 0; }
+/* Tablas económicas: importes alineados a la derecha */
+#presupuesto .legal-table td:last-child, #presupuesto .legal-table th:last-child { text-align: right; white-space: nowrap; }
 
 /* =========================================================================
    BANNER + PANEL DE COOKIES

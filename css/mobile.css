@@ -106,14 +106,21 @@ main .wrap { overflow-x: clip; }
   /* Tablas: caja que scrollea internamente, nunca empuja la página */
   .legal-table-wrap { max-width: 100%; }
   .legal-table { min-width: 480px; font-size: .8rem; }
-  /* La columna del cargo no se parte y se encoge a su contenido
-     (sin espacio sobrante a la derecha) */
-  .legal-table td:first-child, .legal-table th:first-child {
+  /* ORGANIGRAMA: la columna del cargo no se parte y se encoge a su
+     contenido; las tablas caben en pantalla sin deslizar */
+  #organigrama .legal-table td:first-child, #organigrama .legal-table th:first-child {
     white-space: nowrap; overflow-wrap: normal; word-break: normal;
     width: 1%; padding-right: .6rem;
   }
-  /* Las tablas del organigrama caben en pantalla sin deslizar */
   #organigrama .legal-table { min-width: 0; width: 100%; }
+
+  /* PRESUPUESTO: el concepto se parte en varias líneas y el importe
+     queda alineado a la derecha, todo dentro de la pantalla */
+  #presupuesto .legal-table { min-width: 0; width: 100%; }
+  #presupuesto .legal-table td:first-child { overflow-wrap: break-word; }
+  #presupuesto .legal-table td:last-child, #presupuesto .legal-table th:last-child {
+    text-align: right; white-space: nowrap; width: 1%; padding-left: .6rem;
+  }
 
   /* Formularios */
   .field-grid { grid-template-columns: 1fr; gap: 0; }
