@@ -327,7 +327,7 @@
       '<div class="wrap footer__legal">' + legal + "</div>" +
       '<div class="wrap footer__copy">' +
         "<span>© " + new Date().getFullYear() + " Club Deportivo Teruel. Todos los derechos reservados.</span>" +
-        '<span>C/ Juez Villanueva, 1 · 44001 Teruel · Tel. <a href="tel:+34978622074">978 622 074</a></span>' +
+        '<span>C/ Juez Villanueva, 1 · 44002 Teruel · Tel. <a href="tel:+34978622074">978 622 074</a></span>' +
       "</div>" +
     "</footer>";
   }
